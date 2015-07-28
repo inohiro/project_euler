@@ -4,7 +4,7 @@ from (
     select
         *
     from
-        generate_series(0, 1000)
+        generate_series(0, 1000-1)
 ) a
 where
     a.generate_series % 3 = 0
@@ -12,7 +12,7 @@ where
 ;
   sum   
 --------
- 234168
+ 233168
 (1 row)
 
-Time: 0.762 ms
+Time: 1.827 ms

@@ -4,7 +4,7 @@ from (
     select
         *
     from
-        generate_series(0, 1000)
+        generate_series(0, 1000-1)
 ) a
 where
     a.generate_series % 3 = 0
