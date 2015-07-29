@@ -1,12 +1,11 @@
 select
-    sum(a.generate_series)
+    sum(s.i)
 from (
     select
         *
     from
         generate_series(0, 1000-1)
-) a
+) s(i)
 where
-    a.generate_series % 3 = 0
-    or a.generate_series % 5 = 0
+    s.i % 3 = 0 or s.i % 5 = 0
 ;
